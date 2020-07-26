@@ -7,7 +7,7 @@ class Search extends React.Component {
 
         this.state = {
             subject: '',
-            results: {},
+            results: [],
             loading: false,
             message: '',
         };
@@ -49,7 +49,7 @@ class Search extends React.Component {
     renderResults = () => {
         const { results } = this.state;
 
-        if (Object.keys(results).length && results.length) {
+        if (results.length) {
             return (
                 <div>
                     {results.map(result => {
